@@ -1,0 +1,17 @@
+.uncommon-testimonial-slider {
+  
+  & .block-editor-inner-blocks > .block-editor-block-list__layout {
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 3.5%;
+    flex-wrap: nowrap;
+    padding-right: 10vw;
+  }
+  & .swiper-slide {
+    flex: 0 0 54vw;
+    scroll-snap-align: center;
+    opacity: 1;
+    border: 1px dashed #DDD;
+  }
+}

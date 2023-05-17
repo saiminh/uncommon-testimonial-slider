@@ -1,0 +1,62 @@
+@use "../node_modules/swiper/swiper.min.css";
+@use "../node_modules/swiper/modules/mousewheel/mousewheel.min.css";
+@use "../node_modules/swiper/modules/pagination/pagination.min.css";
+
+.uncommon-testimonial-slider {
+
+  & .wp-block-quote {
+    border-left: none;
+    text-align: center;
+  }
+  & .wp-block-quote p {
+    font-size: var(--wp--preset--font-size--h-4);
+
+    @media screen and (max-width: 599px) {
+      font-size: var(--wp--preset--font-size--body-l);
+    }
+  }
+  & .wp-block-quote cite {
+    font-size: var(--wp--preset--font-size--body-m);
+  }
+  & .swiper {
+    width: 160vw;
+    margin-left: -30vw;
+    padding-bottom: 3rem;
+
+    @media screen and (max-width: 599px) {
+      width: 180vw;
+      margin-left: -40vw;
+    }
+  }
+  & .swiper-slide {
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+  }
+  & .swiper-slide.swiper-slide-active {
+    opacity: 1;
+  }
+  & .swiper-pagination {
+    margin-top: 3rem;
+  }
+  & .swiper-pagination-bullet {
+   width: 30px;
+   height: 30px;
+   background-color: transparent;
+   border-radius: 0; 
+   position: relative;
+   opacity: 1;
+
+   &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: var(--wp--preset--color--pigment-purple);
+      position: absolute;
+      left: 0;
+      top: 14px;
+   }
+   &.swiper-pagination-bullet-active:after {
+      background-color: var(--wp--preset--color--contrast);
+   }
+  }
+}
