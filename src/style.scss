@@ -3,6 +3,8 @@
 @use "../node_modules/swiper/modules/pagination/pagination.min.css";
 
 .uncommon-testimonial-slider {
+  overflow: hidden;
+  max-width: 100vw;
 
   & .wp-block-quote {
     border-left: none;
